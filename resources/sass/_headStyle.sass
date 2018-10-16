@@ -1,0 +1,104 @@
+html
+    scroll-behavior: smooth
+
+#bgSection
+    margin-top: 0
+    background: linear-gradient(rgba(0, 0, 0, 0.80),rgba(0, 0, 0, 0.80)), url("../images/vintage-1539695869744-1353.jpg")fixed !important
+    background-position: center
+    background-size: cover
+    height: 100vh
+    div
+        position: absolute
+        left: 10%
+        top: 55%
+        transform: translateY(-50%)
+        width: 40%
+        max-height: 90%
+        h1
+            line-height: 5.3rem
+            margin: 0
+            font-family: font-file-82132
+            font-weight: normal
+            font-size: 5.8rem
+            letter-spacing: 1rem
+        h2
+            margin-top: 2rem
+            font-size: 1rem
+            font-family: "Open Sans", sans-serif
+            letter-spacing: 3/3rem
+
+
+
+//
+#bgSection a
+    position: absolute
+    bottom: 20px
+    left: 50%
+    z-index: 2
+    display: inline-block
+    -webkit-transform: translate(0, -50%)
+    transform: translate(0, -50%)
+    color: #fff
+    font : normal 400 20px/1 'Josefin Sans', sans-serif
+    letter-spacing: .1em
+    text-decoration: none
+    transition: opacity .3s
+
+#bgSection a:hover
+    opacity: .5
+
+
+#bgSection a
+    padding-top: 80px
+
+#bgSection a span
+    position: absolute
+    top: 0
+    left: 50%
+    width: 24px
+    height: 24px
+    margin-left: -12px
+    border-left: 1px solid #fff
+    border-bottom: 1px solid #fff
+    -webkit-transform: rotate(-45deg)
+    transform: rotate(-45deg)
+    -webkit-animation: sdb07 2s infinite
+    animation: sdb07 2s infinite
+    opacity: 0
+    box-sizing: border-box
+
+#bgSection a span:nth-of-type(1)
+    -webkit-animation-delay: 0s
+    animation-delay: 0s
+
+#bgSection a span:nth-of-type(2)
+  top: 16px
+  -webkit-animation-delay: .15s
+  animation-delay: .15s
+
+#bgSection a span:nth-of-type(3)
+    top: 32px
+    -webkit-animation-delay: .3s
+    animation-delay: .3s
+
+@-webkit-keyframes sdb07
+    0%
+        opacity: 0
+
+    50%
+        opacity: 1
+
+    100%
+        opacity: 0
+
+
+@keyframes sdb07
+    0%
+        opacity: 0
+
+    50%
+        opacity: 1
+
+    100%
+        opacity: 0
+
