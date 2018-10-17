@@ -25,8 +25,6 @@ Route::get('/adminEdit', function(){
 });
 
 
-
-
 //Create,delete,edit,update
 Route::post('/create/tasks', 'TaskController@create');
 Route::post('/delete/{id}', 'TaskController@destroy');

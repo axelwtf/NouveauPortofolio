@@ -12,11 +12,11 @@
                 <a class="mywork" href="#project"><i class="fas fa-eye"></i></a>
             </li>
             <li>
-                <a class="contact" href="#sectionContact"><i class="fas fa-envelope"></i></a>
+                <a class="contact" href="#contact"><i class="fas fa-envelope"></i></a>
             </li>
-            @can('superAdmin')
+            @can('admin')
             <li>
-                <a class="contact" href="#sectionContact"><i class="fas fa-cog"></i></a>
+                <a class="contact" href="/adminHome"><i class="fas fa-cog"></i></a>
             </li>
             @endcan
         </ul>

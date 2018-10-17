@@ -18,7 +18,7 @@
 
     @include('partials/skill')
 
-    @include('partials/project')
+    @include('partials/projectTest')
 
     @include('partials/contact')
 

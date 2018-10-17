@@ -17,4 +17,6 @@ class PortofolioController extends Controller
         return view('monSite',compact('tasks','images','sousLogo'));
     }
 
+
+
 }

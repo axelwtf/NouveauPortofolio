@@ -13725,6 +13725,25 @@ __webpack_require__(39);
 //     el: '#app'
 // });
 
+var buttons = document.querySelectorAll('.project');
+var overlay = document.querySelector('.overlay');
+var overlayImage = document.querySelector('.overlay__inner img');
+
+function open(e) {
+  overlay.classList.add('open');
+  var src = e.currentTarget.querySelector('img').src;
+  overlayImage.src = src;
+}
+
+function close() {
+  overlay.classList.remove('open');
+}
+
+buttons.forEach(function (button) {
+  return button.addEventListener('click', open);
+});
+overlay.addEventListener('click', close);
+
 /***/ }),
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
