@@ -74,3 +74,4 @@
 @section('adminlte_js')
     @yield('js')
 @stop
+

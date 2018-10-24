@@ -27,13 +27,16 @@ require('../../node_modules/popper.js/dist/popper.min.js');
 //     el: '#app'
 // });
 
+
+import '../../public/ckeditor/ckeditor.js'
+
 const buttons = document.querySelectorAll('.project');
 const overlay = document.querySelector('.overlay');
 const overlayImage = document.querySelector('.overlay__inner img');
 
-function open(e) {
+function open(x) {
   overlay.classList.add('open');
-  const src= e.currentTarget.querySelector('img').src;
+  const src= x.currentTarget.querySelector('img').src;
   overlayImage.src = src;
 }
 
@@ -43,5 +46,6 @@ function close() {
 
 buttons.forEach(button => button.addEventListener('click', open));
 overlay.addEventListener('click', close);
+
 
 

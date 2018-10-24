@@ -1,13 +1,12 @@
 @component('mail::message')
 # Introduction
-{{ $request->name }}
-{{ $request->email }}
+{{ $name }}
+{{ $email }}
 The body of your message.
-{{ $request->msg }}
+{{ $msg }}
 @component('mail::button', ['url' => ''])
 Button Text
 @endcomponent
-
-Thanks,<br>
+ Thanks,<br>
 {{ config('app.name') }}
 @endcomponent

@@ -1,0 +1,61 @@
+.sectionAbout {
+  margin-top: 15vh;
+}
+
+#titreAboutMe h1 {
+  margin-bottom: 4rm;
+  color: #1A5276 !important;
+  font-size: 30rm !important;
+}
+
+#titreAboutMe p {
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  font-size: 147% !important;
+  text-align: center;
+}
+
+#imgAbout img {
+  padding-top: 15% !important;
+}
+
+.tailleImg {
+  padding-top: 2vh;
+}
+
+.tailleImg div {
+  text-align: center;
+}
+
+.tailleImg div img {
+  height: 13vh !important;
+}
+
+.tailleSousImg div {
+  text-align: center;
+}
+
+.tailleSousImg div img {
+  height: 13vh !important;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 100% !important;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #titreAboutMe {
+    width: 70vh;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  #titreAboutMe {
+    left: 0;
+    width: 2rm !important;
+  }
+}
+/*# sourceMappingURL=aboutStyle.css.map */

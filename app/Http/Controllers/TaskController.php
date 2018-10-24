@@ -7,6 +7,7 @@ use App\Logo;
 use Storage;
 use Illuminate\Http\Request;
 use ImageIntervention;
+use App\User;
 
 class TaskController extends Controller
 {
@@ -17,18 +18,21 @@ class TaskController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     public function create(Request $request)
     {
+        $request->validate([
+            'leTitre' => 'required',
+        ]);
         $path = $request->file('image')->store('public');
         $tasks = new Task;
         $tasks->titre = $request->leTitre;
         $tasks->image = $path;
         $tasks->description = $request->laDescription;
         $tasks->save();
-        return redirect('/adminHome');
+        return redirect('/adminProject');
     }
 
     /**

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Logo;
 use Illuminate\Http\Request;
 use ImageIntervention;
+use App\User;
 
 class LogoController extends Controller
 {

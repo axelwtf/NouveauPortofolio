@@ -1,5 +1,5 @@
 <section id="bgSection">
-    
+
     <section>
         <div class="text">
             <strong>

@@ -3,36 +3,21 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 @stop
 
 @section('content')
-<h1 class="text-center">Image Intervention</h1>
-
-<form action="/Upload_Image" method="post" enctype="multipart/form-data">
-    @csrf
-
-<div >
-    <input name="image" type="file">
-
-    <button type="submit">Envoyer</button>
-</div>
-
-</form>
- <h2>image 2</h2>
-<form action="/Upload_Image2" method="post" enctype="multipart/form-data">
-    @csrf
-
-<div >
-    <input name="sousImage" type="file">
-
-    <button type="submit">Envoyer</button>
-</div>
-
-</form>
 
 <div class="text-center" style="margin-top: 100px; padding-bottom: 48px;">
-    <h1>Project</h1>
+    <h1>New Project</h1>
 </div>
 
 <form class="text-center" action="/create/tasks" method="post" enctype="multipart/form-data">

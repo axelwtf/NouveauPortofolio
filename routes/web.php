@@ -11,13 +11,31 @@
 |
 */
 
+// Route::post('users/{id}', );
+
+
 Auth::routes();
 
 Route::get('/','PortofolioController@index');
+Route::get('/adminSettings','TextEditController@index');
 Route::get('/adminHome', 'AdministrationController@index')->name('home');
+Route::get('/adminProject', 'AdministrationController@indexAdminProject')->name('home');
+Route::get('/adminSkil', 'AdministrationController@indexAdminSkill')->name('home');
+
+Route::post('/editProfil', 'TextEditController@create');
+
 
 Route::get('/adminCreate', function(){
     return view('admin/create');
+});
+
+Route::get('/register', function(){
+    // return view('/vendor/adminlte/register');
+    return redirect('/');
+});
+
+Route::get('/adminCreateSkill', function(){
+    return view('admin/createSkill');
 });
 
 Route::get('/adminEdit', function(){

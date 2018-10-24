@@ -55,6 +55,7 @@
                     <!-- /.col -->
                 </div>
             </form>
+            @auth
             <div class="auth-links">
                 <a href="{{ url(config('adminlte.password_reset_url', 'password/reset')) }}"
                    class="text-center"
@@ -66,6 +67,7 @@
                     >{{ trans('adminlte::adminlte.register_a_new_membership') }}</a>
                 @endif
             </div>
+            @endauth
         </div>
         <!-- /.login-box-body -->
     </div><!-- /.login-box -->

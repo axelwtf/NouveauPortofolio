@@ -108,22 +108,10 @@ return [
     */
 
     'menu' => [
-        'MAIN NAVIGATION',
-        [
-            'text' => 'Blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
-        [
-            'text'        => 'Create',
-            'url'         => 'adminCreate',
-            'icon'        => 'file',
-            'label_color' => 'success',
-        ],
         'ACCOUNT SETTINGS',
         [
             'text' => 'Profile',
-            'url'  => 'admin/settings',
+            'url'  => 'adminSettings',
             'icon' => 'user',
         ],
         [
@@ -131,56 +119,31 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'lock',
         ],
+
+        'CRUD',
         [
-            'text'    => 'Multilevel',
-            'icon'    => 'share',
-            'submenu' => [
-                [
-                    'text' => 'Level One',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'Level One',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'Level Two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'Level Two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'Level Three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'Level Three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'Level One',
-                    'url'  => '#',
-                ],
-            ],
-        ],
-        'LABELS',
-        [
-            'text'       => 'Important',
-            'icon_color' => 'red',
+            'text' => 'Blog',
+            'url'  => 'admin/blog',
+            'can'  => 'manage-blog',
         ],
         [
-            'text'       => 'Warning',
-            'icon_color' => 'yellow',
+            'text'        => 'Skill',
+            'url'         => 'adminSkil',
+            'icon'        => 'bookmark',
+            'label_color' => 'success',
         ],
         [
-            'text'       => 'Information',
-            'icon_color' => 'aqua',
+            'text'        => 'Project',
+            'url'         => 'adminProject',
+            'icon'        => 'bookmark',
+            'label_color' => 'success',
+        ],
+
+        'PORTOFOLIO VIEW',
+        [
+            'text'       => 'Retour site',
+            'url'         => '/',
+            'icon' => 'undo',
         ],
     ],
 

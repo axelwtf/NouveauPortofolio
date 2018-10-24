@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\SousLogo;
 use Illuminate\Http\Request;
 use ImageIntervention;
+use App\User;
 
 class SousLogoController extends Controller
 {

@@ -33,7 +33,7 @@ body nav ul li a:hover {
   color: #F38A8A;
 }
 
-body ul {
+body .socio {
   position: absolute;
   bottom: 20px;
   width: 100%;
@@ -44,7 +44,7 @@ body ul {
   margin: 0;
 }
 
-body ul a {
+body .socio a {
   padding: 7px 0;
   color: #4d4d4e;
   display: block;
@@ -54,7 +54,7 @@ body ul a {
   text-decoration: none;
 }
 
-body ul a:hover {
+body .socio a:hover {
   color: #F38A8A;
 }
 
@@ -66,6 +66,15 @@ body ul a:hover {
   top: 0;
   z-index: 3;
   min-height: 500px;
+}
+
+.navbar .item a.label {
+  color: #eee;
+  position: relative;
+  top: 5px;
+  font-size: 16px;
+  font-family: "Oswald";
+  left: -100px;
 }
 
 @media (max-width: 1400px) {
@@ -200,20 +209,11 @@ html {
   }
 }
 
-.mesSection {
-  background-color: #f1f1f1;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.sectionAbout {
-  background-color: #f1f1f1;
-  height: 70vh;
-  overflow: hidden;
-}
-
-#bgSkill {
-  background-color: #f1f1f1;
+#skill {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(/images/vintage-1539695869744-1353.jpg?a70b1204e3b1e5432d44412df24647b8) fixed !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/images/vintage-1539695869744-1353.jpg?a70b1204e3b1e5432d44412df24647b8) fixed !important;
+  margin-top: 30vh;
+  margin-left: 6rem;
   height: 30vh;
 }
 
@@ -221,54 +221,40 @@ html {
   background-color: #f1f1f1;
 }
 
-#titreAboutMe {
-  position: relative;
-  left: 20vh;
-  top: 50vh;
-  -webkit-transform: translateY(-37vh);
-          transform: translateY(-37vh);
-  vertical-align: middle;
-  max-height: 90%;
+@media (max-width: 1200px) {
+  #skill {
+    display: none;
+  }
+}
+
+.mesProject .container {
+  max-width: 80% !important;
+}
+
+.sectionAbout {
+  margin-top: 15vh;
+}
+
+.sectionAbout .container {
+  max-width: 80% !important;
 }
 
 #titreAboutMe h1 {
-  margin-top: 0;
   margin-bottom: 4rm;
   color: #1A5276 !important;
   font-size: 30rm !important;
-  padding-bottom: 2vh;
 }
 
 #titreAboutMe p {
-  line-height: .9rm;
   color: #ffffff;
   font-family: "Open Sans", sans-serif;
-  white-space: pre-wrap;
   width: 100%;
-  font-size: 20rm !important;
+  font-size: 147% !important;
   text-align: center;
 }
 
-#imgAbout {
-  position: relative;
-  right: -155vh;
-  top: 14vh;
-  -webkit-transform: translateY(-37vh);
-          transform: translateY(-37vh);
-  width: 35%;
-  vertical-align: middle;
-  display: table-cell;
-  max-height: 90%;
-}
-
 #imgAbout img {
-  height: 40vh;
-  width: 45vh;
-}
-
-.bgSkill {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(/images/3d-1536143886195-4926.jpg?9ec0fe1225c5bcfda768c5fba15f1f95) fixed !important;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/images/3d-1536143886195-4926.jpg?9ec0fe1225c5bcfda768c5fba15f1f95) fixed !important;
+  padding-top: 15% !important;
 }
 
 .tailleImg {
@@ -291,6 +277,16 @@ html {
   height: 13vh !important;
 }
 
+.skill .container {
+  max-width: 80% !important;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 100% !important;
+  }
+}
+
 @media screen and (min-width: 1400px) {
   #titreAboutMe {
     width: 70vh;
@@ -304,27 +300,11 @@ html {
   }
 }
 
-#project {
-  height: 100vh;
-  background-color: #f1f1f1;
-}
-
-#img {
-  height: 80vh;
-  padding-left: 6vh;
-}
-
-#carouselId {
-  -webkit-transform: translateY(20%);
-          transform: translateY(20%);
+#contact {
+  margin-top: 20vh;
 }
 
 #contact {
-  height: 100vh;
-}
-
-#contact {
-  background-color: #f1f1f1;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -368,8 +348,7 @@ button {
   background: #ffffff;
   position: relative;
   display: grid;
-  grid-template-columns: repeat(3, minmax(200px, 1fr));
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
   grid-gap: 2px;
 }
 
@@ -6355,7 +6334,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 1200px;
   }
 }
 
