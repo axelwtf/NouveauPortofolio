@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Storage;
 use App\TextEdit;
 use Illuminate\Http\Request;
 
@@ -24,66 +25,34 @@ class TextEditController extends Controller
         $request->validate([
             'editor' => 'required|',
         ]);
+
+        $path = $request->file('aboutImage')->store('public');
+
         $text = new TextEdit;
+
         $text -> aboutEdit = $request -> editor;
+        $text->aboutImage = $path;
         $text->save();
 
         return redirect()->back();
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\TextEdit  $textEdit
-     * @return \Illuminate\Http\Response
-     */
-    public function show(TextEdit $textEdit)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\TextEdit  $textEdit
-     * @return \Illuminate\Http\Response
-     */
     public function edit(TextEdit $textEdit)
     {
-        //
+
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\TextEdit  $textEdit
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, TextEdit $textEdit)
+    public function update(Request $request)
     {
-        //
+        $text = TextEdit::find(1);
+        $text->aboutEdit = $request->editor;
+        if ($request->imageAbout){
+            Storage::delete($text->aboutImage);
+            $text->aboutImage = $request->file('imageAbout')->store('public');
+        }
+
+        $text->save();
+        return redirect()->back();
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\TextEdit  $textEdit
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(TextEdit $textEdit)
-    {
-        //
-    }
 }

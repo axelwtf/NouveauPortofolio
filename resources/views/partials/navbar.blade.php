@@ -3,17 +3,32 @@
     <nav class="text-center float-lefts">
         <ul class="icone1">
             <li class="item">
-                <a class="home" href="#bgSection"><i class="fas fa-home"></i> </a>
-                <a class="label">Home</a>
+
+                <a class="home" href="#bgSection">
+                    <i id='homeIcone' class="fas fa-home"></i>
+                    <p> Home</p>
+                </a>
+
+            </li>
+
+            <li class="item">
+
+                <a class="about" href="#about"><i class="fas fa-user"></i>
+
+                    <p>About</p>
+                </a>
             </li>
             <li class="item">
-                <a class="about" href="#about"><i class="fas fa-user"></i></a>
+                <a class="mywork" href="#project"><i class="fas fa-eye"></i>
+
+                    <p>Project</p>
+                </a>
             </li>
             <li class="item">
-                <a class="mywork" href="#project"><i class="fas fa-eye"></i></a>
-            </li>
-            <li class="item">
-                <a class="contact" href="#contact"><i class="fas fa-envelope"></i></a>
+                <a class="contact" href="#contact"><i class="fas fa-envelope"></i>
+
+                    <p> Contact</p>
+                </a>
             </li>
             @can('admin')
             <li class="item">

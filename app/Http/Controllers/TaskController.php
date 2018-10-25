@@ -26,12 +26,29 @@ class TaskController extends Controller
         $request->validate([
             'leTitre' => 'required',
         ]);
-        $path = $request->file('image')->store('public');
+
+        $image = $request->file('image');
+
+        $filename = time().$image->hashName();
+
+        // taille de base
+        $tailleDeBase = ImageIntervention::make($image);
+        $tailleDeBase->save('images/originals/'.$filename);
+
+        //resize
+        $redimension = ImageIntervention::make($image)->resize(1000, 1000, function ($constraint) {
+            $constraint->aspectRatio();
+        });
+
+        $redimension->save('images/redimensionner/'.$filename);
+
+
         $tasks = new Task;
         $tasks->titre = $request->leTitre;
-        $tasks->image = $path;
+        $tasks->image = $filename;
         $tasks->description = $request->laDescription;
         $tasks->save();
+
         return redirect('/adminProject');
     }
 
@@ -75,13 +92,13 @@ class TaskController extends Controller
         }
 
         $tasks->save();
-        return redirect('/adminHome');
+        return redirect('/adminProject');
     }
 
     public function destroy(Task $task,$id)
     {
         $tasks=Task::find($id);
         $tasks->delete();
-        return redirect('/adminHome');
+        return redirect('/adminProject');
     }
 }

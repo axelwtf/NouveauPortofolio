@@ -22,7 +22,7 @@ Route::get('/adminHome', 'AdministrationController@index')->name('home');
 Route::get('/adminProject', 'AdministrationController@indexAdminProject')->name('home');
 Route::get('/adminSkil', 'AdministrationController@indexAdminSkill')->name('home');
 
-Route::post('/editProfil', 'TextEditController@create');
+Route::post('/editProfil', 'TextEditController@update');
 
 
 Route::get('/adminCreate', function(){
@@ -30,7 +30,6 @@ Route::get('/adminCreate', function(){
 });
 
 Route::get('/register', function(){
-    // return view('/vendor/adminlte/register');
     return redirect('/');
 });
 
@@ -58,4 +57,4 @@ Route::post('/deleteSousLogo/{id}', 'SousLogoController@destroy');
 
 //mails
 Route::get('/contact','ContactController@create');
-Route::post('/contact_create','ContactController@store');
+Route::post('/contactcreate','ContactController@store');

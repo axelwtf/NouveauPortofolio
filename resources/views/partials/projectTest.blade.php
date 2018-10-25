@@ -1,27 +1,17 @@
 <section id="project" class="mesProject" style=" margin-left:6rem; margin-top:30vh;">
 
 
-    <section class="container">
+        <section class="container">
 
-        {{-- <section id="portfolio">
-            @foreach ($tasks as $key => $value)
-            <div class="project">
-                <img class=" text-center " src="{{ Storage::url($value->image)}}" height="100%" width="100%">
-                <p>{{ $value->titre }}</p>
-                <h3 class="grid__title">{{ $value->description }}</h3>
-                <div class="grid__overlay">
-                    <button class="viewbutton">view more</button>
-                </div>
+            <div class=" titreProject">
+                <h1>< Mes Project ></h1>
             </div>
-            @endforeach
-        </section> --}}
-
 
         <div id="portfolio">
             @foreach ($tasks as $key => $value)
 
             <div class="project">
-                <img class=" text-center " src="{{ Storage::url($value->image)}}" height="100%" width="100%">
+                <img class=" text-center " src="{{'images/redimensionner/'.$value->image}}" height="100%" width="100%">
                 <p>{{ $value->titre }}</p>
                 <h3 class="grid__title">{{ $value->description }}</h3>
                 <div class="grid__overlay">

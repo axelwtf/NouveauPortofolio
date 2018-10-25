@@ -16,6 +16,7 @@ class CreateTextEditsTable extends Migration
         Schema::create('text_edits', function (Blueprint $table) {
             $table->increments('id');
             $table->text('aboutEdit');
+            $table->string('aboutImage');
             $table->timestamps();
         });
     }

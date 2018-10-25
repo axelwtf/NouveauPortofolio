@@ -1,5 +1,5 @@
 
-<section id="project">
+<section id="projectCarousel">
 
     <div id="carouselId" class="carousel slide" data-ride="carousel">
         {{-- <ol class="carousel-indicators">

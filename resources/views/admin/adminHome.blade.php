@@ -1,6 +1,7 @@
 @extends('adminlte::page')
 
 @section('title', 'AdminLTE')
+{{--  <link rel="stylesheet" href="/css/app.css">  --}}
 
 @section('content_header')
 @if ($errors->any())

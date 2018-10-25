@@ -13,7 +13,7 @@
 
 <body>
 
-    
+
 
     @include('partials/navbar')
 
@@ -24,6 +24,7 @@
     @include('partials/skill')
 
     @include('partials/projectTest')
+    @include('partials/project')
 
     @include('partials/contact')
 

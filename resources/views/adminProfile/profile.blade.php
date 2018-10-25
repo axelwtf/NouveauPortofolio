@@ -18,7 +18,14 @@
 
 @foreach ($text as $txt)
 <div style="padding-bottom:20%">
-    {!! $txt->aboutEdit !!}
+    <div class="row">
+        <div class="col-6">
+            {!! $txt->aboutEdit !!}
+        </div>
+        <div class="col-6">
+            <img src="{{ Storage::url($txt->aboutImage) }}" height="20%" width="20%" alt="">
+        </div>
+    </div>
 </div>
 
 @endforeach
@@ -26,8 +33,11 @@
 <form action="/editProfil" method="POST" enctype="multipart/form-data">
     @csrf
     <textarea name="editor" id="editor" rows="10" cols="80">
-        This is my textarea to be replaced with CKEditor.
+            @foreach ($text as $txt)
+                {!! $txt->aboutEdit !!}
+            @endforeach
     </textarea>
+    <input type="file" name="imageAbout" id="">
     <button type="submit">Create</button>
 </form>
 

@@ -3,19 +3,19 @@
 
         <div class="row">
 
-            {{-- <div class="col-8"> --}}
-                @foreach ($text as $txt)
+            @foreach ($text as $txt)
+            <div class="col-8">
 
                 {!! $txt->aboutEdit !!}
 
-                @endforeach
-            {{-- </div> --}}
+            </div>
 
             <div class="col-4">
-                <div id="imgAbout text-center">
-                    {{-- <img class="img-fluid text-center" src="images/IMG_20180920_184331.jpg" alt=""> --}}
+                <div  text-center">
+                    <img id="imgAbout" class="img-fluid text-center" src="{{ Storage::url($txt->aboutImage) }}" alt="">
                 </div>
             </div>
+            @endforeach
 
         </div>
 
@@ -23,4 +23,3 @@
     </div>
 
 </section>
-

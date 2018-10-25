@@ -25,7 +25,7 @@
     @csrf
     <div class="card-body">
         <div class="text-center">
-            <img id="img" class="card-img-top" src="{{ Storage::url($value->image) }}" alt="{{$value->image}}" width="300" height="200">
+            <img id="img" class="card-img-top" src="{{'images/redimensionner/'.$value->image}}" alt="{{$value->image}}" width="300" height="200">
         </div>
 
 

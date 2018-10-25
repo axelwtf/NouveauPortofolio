@@ -77,7 +77,7 @@
 <section id="contact">
     <div class="container">
         <div class="well well-sm">
-            <h3><strong>Contact Us</strong></h3>
+            <h3 class="titreContact"><strong>< /Contact Me ></strong></h3>
         </div>
 
         @if ($errors->any())
@@ -105,7 +105,7 @@
             </div>
             <div class="col-md-5">
                 <h4><strong>Get in Touch</strong></h4>
-                <form action="/contact_create" method="post">
+                <form action="/contactcreate" method="post">
                     @csrf
                     <div class="form-group">
                         <input type="text" class="form-control" name="name" value="" placeholder="Name">

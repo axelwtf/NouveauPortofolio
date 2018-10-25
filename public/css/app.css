@@ -20,17 +20,36 @@ body nav ul {
 }
 
 body nav ul li a {
-  font-size: 22px;
+  font-size: 25px;
   color: #4d4d4e;
   display: block;
   line-height: 51px;
   height: 51px;
   position: relative;
   text-decoration: none;
+  margin: 15px;
+}
+
+body nav ul li a i {
+  font-size: 20px;
+}
+
+body nav ul li a p {
+  display: none;
+  font-size: 15px;
 }
 
 body nav ul li a:hover {
   color: #F38A8A;
+}
+
+body nav ul li a:hover i {
+  color: #F38A8A;
+  display: none;
+}
+
+body nav ul li a:hover p {
+  display: block;
 }
 
 body .socio {
@@ -52,6 +71,11 @@ body .socio a {
   line-height: 16px;
   position: relative;
   text-decoration: none;
+  margin: 15px;
+}
+
+body .socio a i {
+  font-size: 20px;
 }
 
 body .socio a:hover {
@@ -60,7 +84,7 @@ body .socio a:hover {
 
 #navbar {
   background: #181818;
-  width: 60px;
+  width: 80px;
   height: 100%;
   position: fixed;
   top: 0;
@@ -89,8 +113,8 @@ html {
 
 #bgSection {
   margin-top: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(/images/vintage-1539695869744-1353.jpg?a70b1204e3b1e5432d44412df24647b8) fixed !important;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/images/vintage-1539695869744-1353.jpg?a70b1204e3b1e5432d44412df24647b8) fixed !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(/images/3d-1536143886195-4926.jpg?9ec0fe1225c5bcfda768c5fba15f1f95) fixed !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/images/3d-1536143886195-4926.jpg?9ec0fe1225c5bcfda768c5fba15f1f95) fixed !important;
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -210,8 +234,6 @@ html {
 }
 
 #skill {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(/images/vintage-1539695869744-1353.jpg?a70b1204e3b1e5432d44412df24647b8) fixed !important;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/images/vintage-1539695869744-1353.jpg?a70b1204e3b1e5432d44412df24647b8) fixed !important;
   margin-top: 30vh;
   margin-left: 6rem;
   height: 30vh;
@@ -221,8 +243,20 @@ html {
   background-color: #f1f1f1;
 }
 
+#projectCarousel {
+  display: none;
+}
+
 @media (max-width: 1200px) {
   #skill {
+    display: none;
+  }
+
+  #projectCarousel {
+    display: block;
+  }
+
+  #project {
     display: none;
   }
 }
@@ -236,7 +270,7 @@ html {
 }
 
 .sectionAbout .container {
-  max-width: 80% !important;
+  max-width: 70% !important;
 }
 
 #titreAboutMe h1 {
@@ -250,11 +284,11 @@ html {
   font-family: "Open Sans", sans-serif;
   width: 100%;
   font-size: 147% !important;
-  text-align: center;
+  display: inline;
 }
 
-#imgAbout img {
-  padding-top: 15% !important;
+#imgAbout {
+  padding-top: 7rem !important;
 }
 
 .tailleImg {
@@ -302,6 +336,20 @@ html {
 
 #contact {
   margin-top: 20vh;
+  margin-left: 6rem;
+}
+
+#contact .container {
+  max-width: 80% !important;
+  padding-left: 3rem;
+}
+
+.titreContact {
+  color: #1A5276 !important;
+  font-size: 30rm !important;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  line-height: 1.1;
 }
 
 #contact {
@@ -333,6 +381,13 @@ html {
   }
 }
 
+.titreProject {
+  color: #1A5276 !important;
+  font-size: 30rm !important;
+  margin-bottom: 5vh;
+  font-family: "Open Sans", sans-serif;
+}
+
 body {
   font-family: "Inconsolata", monospace;
   margin: 0;
@@ -348,7 +403,7 @@ button {
   background: #ffffff;
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
   grid-gap: 2px;
 }
 
@@ -450,7 +505,6 @@ button {
 
 .overlay__inner {
   background: #ffffff;
-  width: 700px;
   padding: 20px;
   position: relative;
   opacity: 1;
