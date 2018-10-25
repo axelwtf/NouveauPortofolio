@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('title', 'AdminLTE')
-{{--  <link rel="stylesheet" href="/css/app.css">  --}}
+
 
 @section('content_header')
 @if ($errors->any())
@@ -26,5 +26,5 @@
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+    <script src=""></script>
 @stop

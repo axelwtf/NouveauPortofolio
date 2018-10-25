@@ -15,11 +15,11 @@
             <div class="carousel-item {{ $loop->iteration == 1 ? 'active' : ''}}">
                 <div class="row">
 
-                    <div class="col-8 p-0">
-                        <img class="d-block w-100" id="img" src="{{ Storage::url($value->image) }}" alt="First slide">
+                    <div class="col-sm-8 p-0">
+                        <img class="d-block w-100" id="img" src="{{'images/redimensionner/'.$value->image}}" alt="First slide">
                     </div>
 
-                    <div class="col-4 color text-center pt-5">
+                    <div class="col-sm-4 color text-center pt-5">
                         <h1 class="mb-5">{{ $value->titre }}</h1>
                         <p>{{ $value->description }}</p>
                     </div>

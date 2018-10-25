@@ -266,7 +266,8 @@ html {
 }
 
 .sectionAbout {
-  margin-top: 15vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 
 .sectionAbout .container {
@@ -331,6 +332,18 @@ html {
   #titreAboutMe {
     left: 0;
     width: 2rm !important;
+  }
+}
+
+@media screen and (max-width: 812px) {
+  #imgAbt2 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 813px) {
+  #imgAbt1 {
+    display: none;
   }
 }
 

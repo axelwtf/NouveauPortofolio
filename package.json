@@ -28,6 +28,7 @@
         "@ckeditor/ckeditor5-essentials": "^10.1.2",
         "@ckeditor/ckeditor5-paragraph": "^10.0.3",
         "@ckeditor/ckeditor5-theme-lark": "^11.1.0",
-        "@fortawesome/fontawesome-free": "^5.4.0"
+        "@fortawesome/fontawesome-free": "^5.4.0",
+        "admin-lte": "^2.4.8"
     }
 }
